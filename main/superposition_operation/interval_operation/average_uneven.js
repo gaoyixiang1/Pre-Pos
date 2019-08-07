@@ -9,7 +9,7 @@ function average_uneven(collection) {
       sum+=collection[i];
     }
   }
-  return sum;
+  return sum/5;
 }
 
 module.exports = average_uneven;
