@@ -6,10 +6,7 @@ function hybrid_operation_to_uneven(collection) {
   var result=[];
   var sum=0
   for(var i=0;i<collection.length;i++){
-    if(collection[i]%2==0){
-      result.push(collection[i]);
-    }
-    else{
+    if(collection[i]%2!==0){
       result.push(collection[i]*3+5);
     }
   }
