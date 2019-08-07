@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "jasmine-node --verbose specs",
+    "test": "jasmine-node --verbose spec",
     "test-single": "jasmine-node --verbose "
   },
   "dependencies": {

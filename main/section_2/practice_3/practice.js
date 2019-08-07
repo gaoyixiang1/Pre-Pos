@@ -1,25 +1,49 @@
 function count_same_elements(collection) {
   //在这里写入代码
-  var result=[
-    {key: "a", count: 0},
-    {key: "e", count: 0},
-    {key: "h", count: 0},
-    {key: "t", count: 0},
-    {key: "f", count: 0},
-    {key: "c", count: 8},
-    {key: "g", count: 0},
-    {key: "b", count: 0},
-    {key: "d", count: 5}
-  ];
-  for(var i=0;i<collection.length;i++){
-    for(var j=0;j<result.length;j++){
-      if(collection[i]==result[j].key){
-        result[j].count++;
+var collection_a = [];
+var m = {};
+for (let i = 0; i < collection.length; i++) {
+  if (collection[i].length == 1) {
+    var k=collection[i];
+    var v=1;
+    if (k in m) {
+      m[k] = m[k] + v;
+    }
+    else {
+      m[k] = v;
+    }
+  }
+  else {
+    if(collection[i].length>3)
+    {
+      var k = collection[i][0];
+      var v = parseInt(collection[i].slice(2,collection[i].length-1));
+      if (k in m) {
+        m[k] = m[k] + v;
+      }
+      else {
+        m[k] = v;
+      }
+    }
+    else {
+      var k = collection[i][0];
+      var v = parseInt(collection[i].slice(2));
+      if (k in m) {
+        m[k] = m[k] + v;
+      }
+      else {
+        m[k] = v;
       }
     }
   }
-  
-return result;
+}
+for (var key in m) {
+  var temp = {};
+  temp['name'] = key;
+  temp['summary'] = m[key];
+  collection_a.push(temp);
+}
+return collection_a;
 }
 
 module.exports = count_same_elements;

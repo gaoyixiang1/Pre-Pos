@@ -22,6 +22,6 @@ describe('compute_median', function () {
   it('计算给定偶数个数字的集合的中位数-2', function () {
 
     var result = compute_median(collection_c);
-    expect(result).toEqual(8.5);
+    expect(result).toEqual(9.5);
   })
 });

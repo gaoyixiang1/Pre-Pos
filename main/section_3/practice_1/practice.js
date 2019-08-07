@@ -8,7 +8,7 @@ function create_updated_collection(collection_a, object_b) {
       }
     }
   }
-  console.log(collection_a);
+  return collection_a;
 }
 
 module.exports = create_updated_collection;
