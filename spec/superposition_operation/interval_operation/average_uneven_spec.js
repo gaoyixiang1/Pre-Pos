@@ -10,6 +10,6 @@ describe('average_uneven', function() {
 
     var result = average_uneven(collection);
 
-    expect(result).toEqual(25);
+    expect(result).toEqual(5);
   })
 });
