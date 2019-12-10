@@ -3,6 +3,11 @@
 function hybrid_operation_to_uneven(collection) {
 
   //在这里写入代码
+  var result=collection.filter(item=>item%2!=0);
+  var arr=result.map((num)=>{
+    return (num*3)+2;
+  });
+  return arr;
 }
 
 module.exports = hybrid_operation_to_uneven;
